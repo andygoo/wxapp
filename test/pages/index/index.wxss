@@ -1,37 +1,3 @@
-@import "../../css/flexboxgrid.wxss";
-
-.box, .box-large {
-  position: relative;
-  box-sizing: border-box;
-  min-height: 1rem;
-  margin-bottom: 0;
-  background: #007FFF;
-  border: 1px solid #FFF;
-  border-radius: 2px;
-  overflow: hidden;
-  text-align: center;
-  color: #fff
-}
-.box-large {
-    height: 8rem;
-}
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
-
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 200px;
+button {
+    margin-bottom: 10px;
 }

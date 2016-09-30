@@ -2,6 +2,7 @@
 var pageData = {}
 pageData.data = {}
 
+var common = require('../../utils/common.js')
 
 //silder
 Object.assign(pageData.data, {
@@ -34,6 +35,7 @@ pageData.actionSheetChange = function(e) {
 }
 pageData.bindItemTap = function(e){
   console.log('tap ' + e.currentTarget.dataset.name)
+  common.f1();
 }
 
 //modal
@@ -94,6 +96,12 @@ pageData.loadingTap = function () {
       loadingHidden: true
     })
   }, 1500)
+}
+
+pageData.navTap = function () {
+  wx.navigateTo({
+    url: 'form?k1=1&k2=2&k3=3&k4=4'
+  })
 }
 
 Page(pageData)

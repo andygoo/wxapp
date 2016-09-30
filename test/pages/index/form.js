@@ -1,9 +1,15 @@
 
+var $_GET = {}
+
+//console.log(options)
+
+
 
 Page({
   onLoad: function(options) {
+    $_GET = options;
     this.setData({
-      title: options.title
+      title: '表单'
     })
   },
   formSubmit: function(e) {
@@ -13,3 +19,4 @@ Page({
     console.log('form发生了reset事件')
   }
 })
+console.log($_GET)

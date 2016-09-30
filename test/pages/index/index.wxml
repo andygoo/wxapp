@@ -7,15 +7,12 @@
   </block>
 </swiper>
 
-
-<button type="default" bindtap="actionSheetTap">弹出action sheet</button>
 <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetChange">
   <block wx:for="{{actionSheetItems}}">
     <action-sheet-item class="item" bindtap="bindItemTap" data-name="{{item}}">{{item}}</action-sheet-item>
   </block>
   <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
 </action-sheet>
-
 
 <modal title="标题" confirm-text="确认" cancel-text="取消" hidden="{{modalHidden}}" bindconfirm="modalChange" bindcancel="modalChange">
   这是对话框的内容。
@@ -25,26 +22,39 @@
   <view> 内容可以插入节点 </view>
 </modal>
 
-<view class="btn-area">
-  <button type="pramray" bindtap="modalTap">点击弹出modal</button>
-  <button type="default" bindtap="modalTap2">点击弹出modal2</button>
-</view>
+<toast hidden="{{toastHidden}}" duration="3000" bindchange="toastChange">
+  已完成
+</toast>
 
-<view class="body-view">
-  <toast hidden="{{toastHidden}}" duration="3000" bindchange="toastChange">
-    成功
-  </toast>
-  <button type="default" bindtap="toastTap">点击弹出toast</button>
-</view>
+<loading hidden="{{loadingHidden}}" bindchange="loadingChange">
+  加载中...
+</loading>
 
-<view class="body-view">
-  <loading hidden="{{loadingHidden}}" bindchange="loadingChange">
-    加载中...
-  </loading>
-  <button type="default" bindtap="loadingTap">点击弹出loading</button>
-</view>
-
-<view class="btn-area">
-  <navigator url="navigate?title=navigate" hover-class="navigator-hover">跳转到新页面</navigator>
-  <navigator url="redirect?title=redirect" redirect hover-class="other-navigator-hover">在当前页打开</navigator>
+<view class="container">
+  <view class="row">
+      <view class="col-xs-12">
+        <button type="default" bindtap="actionSheetTap">弹出action sheet</button>
+      </view>
+      <view class="col-xs-12">
+        <button type="primary" bindtap="modalTap">点击弹出modal</button>
+      </view>
+      <view class="col-xs-12">
+        <button type="warn" bindtap="modalTap2">点击弹出modal2</button>
+      </view>
+      <view class="col-xs-12">
+        <button type="default" bindtap="toastTap">点击弹出toast</button>
+      </view>
+      <view class="col-xs-12">
+        <button type="default" bindtap="loadingTap">点击弹出loading</button>
+      </view>
+      <view class="col-xs-12">
+        <button type="default" bindtap="navTap">表单元素</button>
+      </view>
+      <view class="col-xs-12">
+        <navigator url="form?k1=1&k2=2&k3=3&k4=4" hover-class="navigator-hover">跳转到新页面</navigator>
+      </view>
+      <view class="col-xs-12">
+        <navigator url="redirect?title=redirect" redirect hover-class="other-navigator-hover">在当前页打开</navigator>
+      </view>
+  </view>
 </view>

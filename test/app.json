@@ -1,7 +1,7 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/index/navigate",
+    "pages/index/form",
     "pages/index/redirect",
     "pages/logs/logs"
   ],
@@ -15,6 +15,12 @@
     "list": [{
       "pagePath": "pages/index/index",
       "text": "首页"
+    }, {
+      "pagePath": "pages/logs/logs",
+      "text": "列表"
+    }, {
+      "pagePath": "pages/logs/logs",
+      "text": "发现"
     }, {
       "pagePath": "pages/logs/logs",
       "text": "日志"
